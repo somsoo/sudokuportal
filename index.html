@@ -116,12 +116,6 @@
     .tile .k { color: var(--muted); font-size: 0.8rem; }
     .tile .v { font-size: 1.1rem; font-weight: 900; margin-top: 4px; }
     
-    /* Affiliate & Ads */
-    .affiliate-banner {
-      margin: 20px 0; border: 1px solid #FFCDD2; border-radius: 12px; background: #FFEBEE;
-      padding: 16px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; text-decoration: none; color: inherit;
-    }
-    .affiliate-badge { font-size: 0.65rem; color: #D32F2F; border: 1px solid #D32F2F; border-radius: 4px; padding: 2px 6px; font-weight: bold; }
     .manual-ad-box { width: 100%; min-height: 100px; margin-top: 20px; overflow: hidden; background: #fff; text-align: center; border-radius: 12px; border: 1px solid #eee; }
     
     /* Bottom Sticky Ad */
@@ -194,9 +188,8 @@
       <p id="result-msg" style="margin-top:0; color:#555;">정말 대단해요!</p>
       <button id="btn-share-result" class="btn kakao">카카오톡으로 결과 공유하기</button>
     </div>
-
     
-    
+    <!-- 스도쿠 포탈 화면 중간 광고 -->
     <div class="manual-ad-box">
         <ins class="adsbygoogle"
              style="display:block"
@@ -227,7 +220,7 @@
     </section>
   </div>
 
-  <!-- Sticky Bottom Ad -->
+  <!-- 스도쿠 포탈 하단 고정 띠 배너 광고 -->
   <div class="sticky-ad" id="stickyAd">
     <button class="sticky-ad-close" onclick="document.getElementById('stickyAd').style.display='none'">닫기</button>
     <ins class="adsbygoogle"
