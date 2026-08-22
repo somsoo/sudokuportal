@@ -3,45 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>스도쿠 고급 기술 | 스도쿠 원페이지</title>
-    <meta name="description" content="X-Wing, Swordfish 등 스도쿠 고수들이 사용하는 고급 논리 기술을 배워보세요.">
+    <title>🔥 스도쿠 고급 기술 (X-Wing, Swordfish) | 스도쿠 원페이지</title>
+    <meta name="description" content="스도쿠 전문가로 거듭나기 위한 고급 논리 기술을 배워보세요.">
     <link rel="canonical" href="https://sudokuportal.enjoy-onepage.com/guides/advanced.html">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f8f9fa; margin: 0; padding: 20px; color: #333; line-height: 1.6; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f8f9fa; margin: 0; padding: 20px; color: #333; line-height: 1.6; padding-bottom: 70px; }
         .container { max-width: 500px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.05); }
         h1 { font-size: 1.5rem; color: #f97316; border-bottom: 2px solid #f97316; padding-bottom: 10px; }
         h2 { font-size: 1.2rem; margin-top: 25px; color: #26160a; }
         .back-btn { display: inline-block; margin-bottom: 15px; padding: 10px 15px; background: #f97316; color: #fff; text-decoration: none; border-radius: 8px; font-weight: bold; }
-        .tech-box { background: #f1f8ff; border: 1px solid #cce5ff; padding: 15px; border-radius: 8px; margin-bottom: 15px; }
+        .tech-box { background: #f1f8ff; border: 1px solid #cce5ff; padding: 15px; margin-bottom: 15px; border-radius: 8px; }
+        .manual-ad-box { width: 100%; min-height: 100px; margin-top: 20px; overflow: hidden; background: #fff; text-align: center; border-radius: 12px; border: 1px solid #eee; }
+        .sticky-ad { position: fixed; bottom: 0; left: 0; width: 100%; background: #fff; z-index: 100; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); display: flex; justify-content: center; align-items: center; min-height: 60px; }
+        .sticky-ad-close { position: absolute; right: 10px; top: -25px; background: #fff; border: 1px solid #ccc; border-radius: 5px 5px 0 0; padding: 2px 10px; font-size: 0.8rem; cursor: pointer; color: #666; }
     </style>
 </head>
 <body>
     <div class="container">
         <a href="../index.html" class="back-btn">⬅ 메인으로 돌아가기</a>
-        <h1>🔥 스도쿠 고급 기술 (마스터 가이드)</h1>
+        <h1>🔥 스도쿠 고급 기술</h1>
         
-        <p>쉬움/보통 난이도는 단순 스캐닝으로 풀리지만, '어려움' 이상의 난이도에서는 메모(후보 숫자)를 바탕으로 한 고급 논리 기술이 필수적입니다.</p>
+        <p>어려움(Hard) 난이도 이상의 스도쿠를 풀기 위해서는 단순한 스캐닝을 넘어선 <strong>고급 논리 기술</strong>이 필요합니다. 메모 기능을 켜고 빈 칸의 후보 숫자들을 모두 적어둔 뒤 아래 기술들을 적용해 보세요.</p>
 
+        <h2>1. 네이키드 페어 (Naked Pairs)</h2>
         <div class="tech-box">
-            <h2>1. 네이키드 페어 (Naked Pairs)</h2>
-            <p>가장 기본적이고 자주 쓰이는 기술입니다. 한 가로줄/세로줄/박스 내에 <strong>후보 숫자가 똑같이 두 개인 칸이 딱 두 개</strong> 있다면, 그 두 숫자(예: 3과 7)는 무조건 그 두 칸 중 하나씩 나눠 갖게 됩니다.</p>
-            <p><strong>활용법:</strong> 따라서 해당 가로/세로/박스 내의 다른 빈칸들의 메모에서 3과 7은 모두 지워버릴 수 있습니다.</p>
+            같은 그룹(가로줄, 세로줄 또는 3x3 박스) 안에 정확히 <strong>같은 후보 숫자 2개만을 가진 칸이 2곳</strong> 있다면, 그 그룹의 다른 어떤 칸에도 그 두 숫자가 들어갈 수 없습니다.<br>
+            <em>예: 가로줄의 두 칸에 후보가 [3, 7]만 있다면, 그 가로줄의 나머지 빈 칸들 후보에서 3과 7을 모두 지울 수 있습니다.</em>
         </div>
 
+        <h2>2. 히든 싱글 (Hidden Singles)</h2>
         <div class="tech-box">
-            <h2>2. 엑스 윙 (X-Wing)</h2>
-            <p>특정 숫자(예: 5)가 들어갈 수 있는 칸이 <strong>두 개의 가로줄에서 정확히 같은 열(세로축)에 위치</strong>할 때 발생합니다.</p>
-            <p>네 개의 칸이 직사각형의 꼭짓점 모양을 만드는데, 이 숫자들은 대각선 방향(X 모양)으로만 배치될 수 있습니다.</p>
-            <p><strong>활용법:</strong> 이 경우 해당 두 세로줄의 다른 모든 칸에서는 숫자 5를 후보에서 지울 수 있습니다.</p>
+            특정 칸에 후보 숫자가 여러 개 적혀 있더라도, 해당 칸이 속한 그룹(가로, 세로, 박스)을 통틀어 <strong>어떤 숫자(예: 5)가 들어갈 수 있는 유일한 자리</strong>가 그 칸뿐이라면, 그 칸의 정답은 무조건 5가 됩니다.
         </div>
 
+        <h2>3. 엑스 윙 (X-Wing)</h2>
         <div class="tech-box">
-            <h2>3. 스워드피시 (Swordfish)</h2>
-            <p>엑스윙의 확장 버전입니다. 2줄이 아닌 <strong>3줄</strong>에서 특정 후보 숫자가 공통된 3개의 열에만 나타날 때 성립합니다.</p>
-            <p><strong>활용법:</strong> 9개의 교차점 중에서 정답이 배분되므로, 공통된 열(또는 행)의 나머지 빈칸들에서 해당 숫자를 제거할 수 있습니다.</p>
+            어떤 숫자(예: 4)가 두 개의 평행한 줄(예: 두 개의 가로줄)에서 <strong>각각 정확히 두 칸에만</strong> 들어갈 수 있고, 그 네 칸이 완벽한 직사각형(꼭짓점)을 이룰 때 발생합니다.<br>
+            이 경우, 4는 반드시 직사각형의 대각선 방향으로 엇갈려 들어가게 되므로, 그 두 세로줄의 다른 모든 칸에서는 4를 후보에서 지울 수 있습니다.
         </div>
-        
-        <p style="text-align:center; color:#666; font-size:0.9rem; margin-top:20px;">고급 기술은 말로 이해하는 것보다 메모 기능을 적극적으로 활용하며 실전에서 패턴을 찾는 눈을 기르는 것이 중요합니다!</p>
+
+        <!-- 하단 본문 광고 -->
+        <div class="manual-ad-box">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-2228289204702106"
+                 data-ad-slot="9180628627"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>try{(adsbygoogle=window.adsbygoogle||[]).push({});}catch(e){}</script>
+        </div>
+    </div>
+    
+    <!-- 하단 고정 배너 광고 -->
+    <div class="sticky-ad" id="stickyAd">
+      <button class="sticky-ad-close" onclick="document.getElementById('stickyAd').style.display='none'">닫기</button>
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:320px;height:50px"
+           data-ad-client="ca-pub-2228289204702106"
+           data-ad-slot="1609260362"></ins>
+      <script>try{(adsbygoogle=window.adsbygoogle||[]).push({});}catch(e){}</script>
     </div>
 </body>
 </html>
