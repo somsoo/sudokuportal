@@ -533,9 +533,77 @@
       renderBoard(); renderMemoPad(); highlightErrors(false); document.getElementById('info-state').textContent='진행 중';
     });
     document.getElementById('btn-share-result').addEventListener('click', shareResultKakao);
-
     // Init
-    buildBoard(); buildPad(); buildMemoPad(); newGame('normal');
+    buildBoard(); buildPad(); buildMemoPad();
+    const urlParams = new URLSearchParams(window.location.search);
+    const pStr = urlParams.get('p');
+    const sStr = urlParams.get('s');
+    if (pStr && sStr && pStr.length === 81 && sStr.length === 81) {
+      revealed = false;
+      let urlValid = true;
+      for(let r=0;r<9;r++){
+        for(let c=0;c<9;c++){
+          const pv = parseInt(pStr[r*9+c]);
+          const sv = parseInt(sStr[r*9+c]);
+          if(isNaN(pv) || isNaN(sv)){ urlValid = false; }
+          puzzle[r][c] = pv;
+          solution[r][c] = sv;
+          state[r][c] = pv;
+          given[r][c] = (pv !== 0);
+        }
+      }
+      if(urlValid){
+        marked=[...Array(9)].map(()=>Array(9).fill(false));
+        memos=[...Array(9)].map(() => [...Array(9)].map(() => new Set()));
+        selected={r:null,c:null}; mistakes=0; document.getElementById('info-state').textContent='진행 중 (도움 요청받은 문제)';
+        finalClearTime=null; finalDifficulty=null;
+        document.getElementById('result-share-area').style.display='none';
+        startTimer(); renderBoard(); renderMemoPad();
+        window.history.replaceState({}, document.title, window.location.pathname);
+      } else {
+        newGame('normal');
+      }
+    } else {
+      newGame('normal');
+    }
+
+    async function shareSiteKakao() {
+        await loadKakaoSDK();
+        if(!window.Kakao) return;
+        if(!Kakao.isInitialized()) Kakao.init(KAKAO_APP_KEY);
+        Kakao.Share.sendDefault({
+          objectType: "feed",
+          content: {
+            title: "무설치 원페이지 스도쿠!",
+            description: "뇌 건강과 집중력 향상에 좋은 스도쿠를 언제 어디서나 가볍게 즐겨보세요.",
+            imageUrl: "https://sudokuportal.enjoy-onepage.com/og-image.png",
+            link: { mobileWebUrl: "https://sudokuportal.enjoy-onepage.com/", webUrl: "https://sudokuportal.enjoy-onepage.com/" }
+          },
+          buttons: [{ title: "스도쿠 풀러 가기", link: { mobileWebUrl: "https://sudokuportal.enjoy-onepage.com/", webUrl: "https://sudokuportal.enjoy-onepage.com/" } }]
+        });
+    }
+
+    async function sharePuzzleKakao() {
+        await loadKakaoSDK();
+        if(!window.Kakao) return;
+        if(!Kakao.isInitialized()) Kakao.init(KAKAO_APP_KEY);
+        const ps = puzzle.flat().join('');
+        const ss = solution.flat().join('');
+        const shareUrl = "https://sudokuportal.enjoy-onepage.com/?p=" + ps + "&s=" + ss;
+        Kakao.Share.sendDefault({
+          objectType: "feed",
+          content: {
+            title: "🤔 이 스도쿠 문제 좀 풀어줄 사람?",
+            description: "도저히 안 풀려서 헬프 요청합니다! 링크를 눌러서 저 대신 풀어주세요!",
+            imageUrl: "https://sudokuportal.enjoy-onepage.com/og-image.png",
+            link: { mobileWebUrl: shareUrl, webUrl: shareUrl }
+          },
+          buttons: [{ title: "대신 풀어주기", link: { mobileWebUrl: shareUrl, webUrl: shareUrl } }]
+        });
+    }
+    
+    document.getElementById('btn-share-puzzle').addEventListener('click', sharePuzzleKakao);
+    document.getElementById('btn-share-site').addEventListener('click', shareSiteKakao);
 
     // Keyboard support
     document.addEventListener('keydown',e=>{
@@ -554,6 +622,8 @@
   </script>
 </body>
 </html>
+
+
 
 
 
