@@ -1,72 +1,217 @@
-﻿<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>💡 스도쿠 기본 규칙 및 초보자 팁 | 스도쿠 원페이지</title>
-    <meta name="description" content="스도쿠를 처음 접하는 분들을 위한 기본 규칙과 초보자 탈출을 위한 필수 팁을 확인하세요.">
-    <link rel="canonical" href="https://sudokuportal.enjoy-onepage.com/guides/rules.html">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f8f9fa; margin: 0; padding: 20px; color: #333; line-height: 1.6; padding-bottom: 70px; }
-        .container { max-width: 800px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.05); }
-        h1 { font-size: 1.5rem; color: #f97316; border-bottom: 2px solid #f97316; padding-bottom: 10px; }
-        h2 { font-size: 1.2rem; margin-top: 25px; color: #26160a; }
-        .back-btn { display: inline-block; margin-bottom: 15px; padding: 10px 15px; background: #f97316; color: #fff; text-decoration: none; border-radius: 8px; font-weight: bold; }
-        .rule-box { background: #fff7ed; border-left: 4px solid #f97316; padding: 15px; margin-bottom: 15px; }
-        .manual-ad-box { width: 100%; min-height: 100px; margin-top: 20px; overflow: hidden; background: #fff; text-align: center; border-radius: 12px; border: 1px solid #eee; }
-        .sticky-ad { position: fixed; bottom: 0; left: 0; width: 100%; background: #fff; z-index: 100; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); display: flex; justify-content: center; align-items: center; min-height: 60px; }
-        .sticky-ad-close { position: absolute; right: 10px; top: -25px; background: #fff; border: 1px solid #ccc; border-radius: 5px 5px 0 0; padding: 2px 10px; font-size: 0.8rem; cursor: pointer; color: #666; }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>스도쿠 푸는법 초보자를 위한 3대 기본 규칙</title>
+  <meta name="description" content="가로줄, 세로줄, 3x3 박스 숫자 1~9 채우기! 스도쿠 초보자를 위한 가장 빠른 입문 가이드." />
+  <meta name="keywords" content="스도쿠 푸는법, 스도쿠 규칙, 무료 스도쿠, 스도쿠 입문" />
+  <meta name="theme-color" content="#f97316" />
+  <link rel="icon" href="../favicon.ico">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --primary: #f97316;
+      --dark: #9a3412;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      padding-bottom: 60px;
+    }
+    .nav-bar {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 14px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .nav-bar a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 30px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    }
+    .guide-hero-img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius);
+      margin-bottom: 24px;
+      display: block;
+      border: 1px solid var(--border);
+    }
+    h1 {
+      font-size: 1.65rem;
+      color: var(--dark);
+      margin-bottom: 16px;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+    }
+    .meta-tag {
+      display: inline-block;
+      background: #f1f5f9;
+      color: var(--muted);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .guide-section {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid #f1f5f9;
+    }
+    .guide-section h2 {
+      font-size: 1.3rem;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+    .guide-section p {
+      color: #334155;
+      font-size: 1.02rem;
+      margin-bottom: 14px;
+      word-break: keep-all;
+    }
+    .callout {
+      background: #f8fafc;
+      border-left: 4px solid var(--primary);
+      padding: 16px 18px;
+      border-radius: 6px;
+      margin: 18px 0;
+      font-size: 0.95rem;
+      color: #334155;
+    }
+    .callout strong { color: var(--dark); }
+    .faq-item {
+      background: #f8fafc;
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      border: 1px solid var(--border);
+    }
+    .faq-item h3 {
+      font-size: 1.05rem;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+    .faq-item p {
+      font-size: 0.95rem;
+      color: #475569;
+    }
+    .ad-wrap {
+      margin: 30px 0;
+      min-height: 100px;
+      background: #f8fafc;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .home-btn {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 16px;
+      border-radius: 8px;
+      margin-top: 30px;
+      font-size: 1.05rem;
+    }
+    .home-btn:hover { opacity: 0.95; }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <a href="../index.html" class="back-btn">⬅ 메인으로 돌아가기</a>
-        <h1>💡 스도쿠 기본 규칙</h1>
-        <!-- 상단 본문 광고 -->
-        <div class="manual-ad-box" style="margin-top: 10px; margin-bottom: 20px;">
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-2228289204702106"
-                 data-ad-slot="9180628627"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>try{(adsbygoogle=window.adsbygoogle||[]).push({});}catch(e){}</script>
-        </div>
-        
-        <p>스도쿠는 매우 단순하지만 논리적인 규칙을 가진 숫자 퍼즐입니다. 연산 능력이 전혀 필요 없으며, 오직 <strong>1부터 9까지의 숫자</strong>만 기억하면 됩니다.</p>
-
-        <h2>3가지 핵심 규칙</h2>
-        <div class="rule-box">
-            <ol>
-                <li><strong>가로줄 규칙:</strong> 9개의 가로줄 각각에는 1부터 9까지의 숫자가 중복 없이 한 번씩만 들어가야 합니다.</li>
-                <li><strong>세로줄 규칙:</strong> 9개의 세로줄 각각에도 1부터 9까지의 숫자가 겹치지 않게 하나씩 들어가야 합니다.</li>
-                <li><strong>3x3 박스 규칙:</strong> 굵은 선으로 구분된 9개의 3x3 작은 박스 안에도 1부터 9까지의 숫자가 한 번씩만 들어가야 합니다.</li>
-            </ol>
-        </div>
-
-        <h2>초보자를 위한 문제 풀이 팁</h2>
-        <ul>
-            <li><strong>채워진 숫자가 많은 곳부터 공략하세요:</strong> 빈 칸이 1~2개밖에 남지 않은 가로줄, 세로줄, 또는 3x3 박스를 먼저 찾으면 쉽게 첫 단추를 꿸 수 있습니다.</li>
-            <li><strong>스캐닝(Scanning) 기법:</strong> 특정 숫자(예: 1)가 보드 전체에 어디어디 있는지 눈으로 훑어보세요. 두 개의 3x3 박스에 1이 있다면, 나머지 하나의 박스에서 1이 들어갈 수 있는 자리는 논리적으로 좁혀집니다.</li>
-            <li><strong>메모 기능을 적극 활용하세요:</strong> 헷갈리는 칸이 있다면 '후보 숫자 메모'를 켜고 들어갈 수 있는 숫자 2~3개를 미리 적어두세요. 다른 칸을 채우다 보면 메모해둔 숫자 중 하나가 지워지면서 정답이 드러납니다.</li>
-        </ul>
-        
-        <!-- 하단 본문 광고 -->
-        <div class="manual-ad-box">
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-2228289204702106"
-                 data-ad-slot="9180628627"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>try{(adsbygoogle=window.adsbygoogle||[]).push({});}catch(e){}</script>
-        </div>
+  <div class="nav-bar">
+    <a href="../index.html">← 스도쿠 포털 바로가기</a>
+    <span style="font-size:0.85rem; color:#94a3b8;">실무 가이드</span>
+  </div>
+  
+  <div class="container">
+    <img src="../images/guide1.webp" alt="스도쿠 기본 규칙 격자 분석 및 숫자 채우기 공식" class="guide-hero-img" loading="lazy" />
+    <span class="meta-tag">검증된 실무 정보 · 2026 최신 개정판</span>
+    <h1>스도쿠 푸는법: 단 3가지 규칙으로 끝내는 초보자 필승 가이드</h1>
+    
+    <!-- Ad Slot Middle -->
+    <div class="ad-wrap">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-2228289204702106"
+           data-ad-slot="auto"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
+
     
-    
+        <section class="guide-section">
+            <h2>스도쿠를 지배하는 3대 불변의 원칙</h2>
+            <p>스도쿠(Sudoku)는 일본어 '숫자는 한 번만 들어가야 한다(数字は独身に限る)'에서 유래했습니다. 가로 9칸(Row), 세로 9칸(Column), 그리고 굵은 선으로 둘러싸인 3x3 박스(Block) 각각에 1부터 9까지의 숫자가 중복 없이 단 한 번씩만 들어가야 합니다.</p>
+            <div class='callout'><strong>풀이 팁:</strong> 이미 숫자가 6~7개 이상 채워진 가로줄, 세로줄, 박스를 먼저 찾아 빈칸 후보군을 좁히는 것이 기본 중의 기본입니다.</div>
+        </section>
+        
+        <section class="guide-section">
+            <h2>초보자가 가장 많이 하는 실수와 해결책</h2>
+            <p>가장 흔한 실수는 확실하지 않은 숫자를 '추측(Guessing)'해서 적는 것입니다. 스도쿠는 100% 논리 게임이므로 단 하나의 잘못된 추측이 전체 판을 무너뜨립니다. 반드시 논리적으로 그 칸에 올 수 있는 숫자가 단 하나뿐일 때(Naked Single)만 입력하세요.</p>
+            
+        </section>
+        
+
+    <div class="guide-section">
+      <h2>자주 묻는 질문 (FAQ)</h2>
+      
+        <div class="faq-item">
+            <h3>Q. 수학을 못해도 스도쿠를 잘할 수 있나요?</h3>
+            <p>A. 스도쿠는 연산이나 수학 계산이 전혀 필요 없는 순수 기호 논리 퍼즐입니다. 숫자 대신 문자나 색상으로 바꾸어도 똑같이 풀 수 있습니다.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>Q. 막혔을 때는 어떻게 해야 하나요?</h3>
+            <p>A. 각 빈칸마다 들어갈 수 있는 후보 숫자들을 작게 메모(Pencil Mark)해두면 숨겨진 단서가 한눈에 보입니다.</p>
+        </div>
+        
+    </div>
+
+    <!-- Ad Slot Bottom -->
+    <div class="ad-wrap">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-2228289204702106"
+           data-ad-slot="auto"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <a href="../index.html" class="home-btn">스도쿠 포털 계산기 이용하기</a>
+  </div>
 </body>
 </html>
-
-
-

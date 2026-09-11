@@ -1,73 +1,217 @@
-﻿<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🔥 스도쿠 고급 기술 (X-Wing, Swordfish) | 스도쿠 원페이지</title>
-    <meta name="description" content="스도쿠 전문가로 거듭나기 위한 고급 논리 기술을 배워보세요.">
-    <link rel="canonical" href="https://sudokuportal.enjoy-onepage.com/guides/advanced.html">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background-color: #f8f9fa; margin: 0; padding: 20px; color: #333; line-height: 1.6; padding-bottom: 70px; }
-        .container { max-width: 800px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.05); }
-        h1 { font-size: 1.5rem; color: #f97316; border-bottom: 2px solid #f97316; padding-bottom: 10px; }
-        h2 { font-size: 1.2rem; margin-top: 25px; color: #26160a; }
-        .back-btn { display: inline-block; margin-bottom: 15px; padding: 10px 15px; background: #f97316; color: #fff; text-decoration: none; border-radius: 8px; font-weight: bold; }
-        .tech-box { background: #f1f8ff; border: 1px solid #cce5ff; padding: 15px; margin-bottom: 15px; border-radius: 8px; }
-        .manual-ad-box { width: 100%; min-height: 100px; margin-top: 20px; overflow: hidden; background: #fff; text-align: center; border-radius: 12px; border: 1px solid #eee; }
-        .sticky-ad { position: fixed; bottom: 0; left: 0; width: 100%; background: #fff; z-index: 100; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); display: flex; justify-content: center; align-items: center; min-height: 60px; }
-        .sticky-ad-close { position: absolute; right: 10px; top: -25px; background: #fff; border: 1px solid #ccc; border-radius: 5px 5px 0 0; padding: 2px 10px; font-size: 0.8rem; cursor: pointer; color: #666; }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>스도쿠 고급 공식 X-Wing 네이키드 페어 기법</title>
+  <meta name="description" content="중급자에서 고급자로! 네이키드 페어, 히든 페어, X-Wing 등 실전 스도쿠 고급 공식 총정리." />
+  <meta name="keywords" content="스도쿠 고급 공식, 스도쿠 X-Wing, 스도쿠 페어, 스도쿠 기술" />
+  <meta name="theme-color" content="#f97316" />
+  <link rel="icon" href="../favicon.ico">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --primary: #f97316;
+      --dark: #9a3412;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      padding-bottom: 60px;
+    }
+    .nav-bar {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 14px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .nav-bar a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 30px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    }
+    .guide-hero-img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius);
+      margin-bottom: 24px;
+      display: block;
+      border: 1px solid var(--border);
+    }
+    h1 {
+      font-size: 1.65rem;
+      color: var(--dark);
+      margin-bottom: 16px;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+    }
+    .meta-tag {
+      display: inline-block;
+      background: #f1f5f9;
+      color: var(--muted);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .guide-section {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid #f1f5f9;
+    }
+    .guide-section h2 {
+      font-size: 1.3rem;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+    .guide-section p {
+      color: #334155;
+      font-size: 1.02rem;
+      margin-bottom: 14px;
+      word-break: keep-all;
+    }
+    .callout {
+      background: #f8fafc;
+      border-left: 4px solid var(--primary);
+      padding: 16px 18px;
+      border-radius: 6px;
+      margin: 18px 0;
+      font-size: 0.95rem;
+      color: #334155;
+    }
+    .callout strong { color: var(--dark); }
+    .faq-item {
+      background: #f8fafc;
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      border: 1px solid var(--border);
+    }
+    .faq-item h3 {
+      font-size: 1.05rem;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+    .faq-item p {
+      font-size: 0.95rem;
+      color: #475569;
+    }
+    .ad-wrap {
+      margin: 30px 0;
+      min-height: 100px;
+      background: #f8fafc;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .home-btn {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 16px;
+      border-radius: 8px;
+      margin-top: 30px;
+      font-size: 1.05rem;
+    }
+    .home-btn:hover { opacity: 0.95; }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <a href="../index.html" class="back-btn">⬅ 메인으로 돌아가기</a>
-        <h1>🔥 스도쿠 고급 기술</h1>
-        <!-- 상단 본문 광고 -->
-        <div class="manual-ad-box" style="margin-top: 10px; margin-bottom: 20px;">
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-2228289204702106"
-                 data-ad-slot="9180628627"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>try{(adsbygoogle=window.adsbygoogle||[]).push({});}catch(e){}</script>
+  <div class="nav-bar">
+    <a href="../index.html">← 스도쿠 포털 바로가기</a>
+    <span style="font-size:0.85rem; color:#94a3b8;">실무 가이드</span>
+  </div>
+  
+  <div class="container">
+    <img src="../images/guide2.webp" alt="스도쿠 고급 공식 네이키드 페어 및 X-Wing 전략 다이어그램" class="guide-hero-img" loading="lazy" />
+    <span class="meta-tag">검증된 실무 정보 · 2026 최신 개정판</span>
+    <h1>스도쿠 고급 공식: X-Wing과 페어 기법으로 난제 돌파하기</h1>
+    
+    <!-- Ad Slot Middle -->
+    <div class="ad-wrap">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-2228289204702106"
+           data-ad-slot="auto"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    
+        <section class="guide-section">
+            <h2>네이키드 페어(Naked Pair)로 후보군 대청소하기</h2>
+            <p>같은 행, 열, 또는 3x3 박스 안에서 정확히 2개의 칸이 오직 동일한 2개의 후보 숫자(예: 3, 7)만을 가질 때, 해당 그룹의 다른 모든 칸에서는 3과 7을 완전히 제거할 수 있습니다. 이를 통해 연쇄적으로 단일 후보군이 드러납니다.</p>
+            <div class='callout'><strong>공식 원리:</strong> 그 2개의 칸 중 어느 칸이 3이든 7이든, 두 숫자는 그 2칸이 독점하기 때문입니다.</div>
+        </section>
+        
+        <section class="guide-section">
+            <h2>강력한 사각형 제거 전략: X-Wing 기법</h2>
+            <p>서로 다른 2개의 행에서 특정 숫자(예: 5)가 오직 동일한 2개의 열에만 위치할 때, 직사각형 모양의 4개 꼭짓점이 형성됩니다. 이 경우 해당 2개 열의 다른 모든 행에서는 숫자 5를 완벽히 소거할 수 있습니다.</p>
+            
+        </section>
+        
+
+    <div class="guide-section">
+      <h2>자주 묻는 질문 (FAQ)</h2>
+      
+        <div class="faq-item">
+            <h3>Q. X-Wing은 언제 찾아야 하나요?</h3>
+            <p>A. 기본적인 페어와 트리플을 모두 적용했는데도 더 이상 진전이 없는 하드/익스트림 난이도에서 주로 사용됩니다.</p>
         </div>
         
-        <p>어려움(Hard) 난이도 이상의 스도쿠를 풀기 위해서는 단순한 스캐닝을 넘어선 <strong>고급 논리 기술</strong>이 필요합니다. 메모 기능을 켜고 빈 칸의 후보 숫자들을 모두 적어둔 뒤 아래 기술들을 적용해 보세요.</p>
-
-        <h2>1. 네이키드 페어 (Naked Pairs)</h2>
-        <div class="tech-box">
-            같은 그룹(가로줄, 세로줄 또는 3x3 박스) 안에 정확히 <strong>같은 후보 숫자 2개만을 가진 칸이 2곳</strong> 있다면, 그 그룹의 다른 어떤 칸에도 그 두 숫자가 들어갈 수 없습니다.<br>
-            <em>예: 가로줄의 두 칸에 후보가 [3, 7]만 있다면, 그 가로줄의 나머지 빈 칸들 후보에서 3과 7을 모두 지울 수 있습니다.</em>
+        <div class="faq-item">
+            <h3>Q. 스워드피시(Swordfish)는 무엇인가요?</h3>
+            <p>A. X-Wing이 2개의 행과 2개의 열을 이용한다면, 스워드피시는 3개의 행과 3개의 열로 확장한 3차원 그리드 소거법입니다.</p>
         </div>
-
-        <h2>2. 히든 싱글 (Hidden Singles)</h2>
-        <div class="tech-box">
-            특정 칸에 후보 숫자가 여러 개 적혀 있더라도, 해당 칸이 속한 그룹(가로, 세로, 박스)을 통틀어 <strong>어떤 숫자(예: 5)가 들어갈 수 있는 유일한 자리</strong>가 그 칸뿐이라면, 그 칸의 정답은 무조건 5가 됩니다.
-        </div>
-
-        <h2>3. 엑스 윙 (X-Wing)</h2>
-        <div class="tech-box">
-            어떤 숫자(예: 4)가 두 개의 평행한 줄(예: 두 개의 가로줄)에서 <strong>각각 정확히 두 칸에만</strong> 들어갈 수 있고, 그 네 칸이 완벽한 직사각형(꼭짓점)을 이룰 때 발생합니다.<br>
-            이 경우, 4는 반드시 직사각형의 대각선 방향으로 엇갈려 들어가게 되므로, 그 두 세로줄의 다른 모든 칸에서는 4를 후보에서 지울 수 있습니다.
-        </div>
-
-        <!-- 하단 본문 광고 -->
-        <div class="manual-ad-box">
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-2228289204702106"
-                 data-ad-slot="9180628627"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>try{(adsbygoogle=window.adsbygoogle||[]).push({});}catch(e){}</script>
-        </div>
+        
     </div>
-    
-    
+
+    <!-- Ad Slot Bottom -->
+    <div class="ad-wrap">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-2228289204702106"
+           data-ad-slot="auto"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <a href="../index.html" class="home-btn">스도쿠 포털 계산기 이용하기</a>
+  </div>
 </body>
 </html>
-
-
-
