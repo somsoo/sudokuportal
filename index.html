@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
@@ -22,8 +22,7 @@
   <meta property="og:url" content="https://sudokuportal.enjoy-onepage.com/" />
   <meta property="og:image" content="https://sudokuportal.enjoy-onepage.com/og-image.png" />
   
-  <!-- 카카오 앱키 설정 (페이지 로드 시 SDK는 클릭 시점에 동적으로 로드) -->
-  <script>const KAKAO_APP_KEY = '4dc8036dea53bcc084ed7507cbf711e2';</script>
+
   
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
 
@@ -71,7 +70,7 @@
       background: #fff; color: var(--brand); border: 1px solid #cbd5e1;
     }
     .btn.primary { background: var(--brand); color: #fff; border: none; }
-    .btn.kakao { background: #FEE500; color: #000; border: none; margin-top: 10px; width: 100%; }
+    .btn.kakao { background: var(--brand); color: #fff; border: none; margin-top: 10px; width: 100%; }
     
     /* Board */
     .board {
@@ -183,17 +182,24 @@
     <div id="result-share-area" style="display:none; text-align:center; margin-top:20px;">
       <h3 style="color:var(--brand); margin-bottom:5px;">🎉 퍼즐 클리어!</h3>
       <p id="result-msg" style="margin-top:0; color:#555;">정말 대단해요!</p>
-      <button id="btn-share-result" class="btn kakao">카카오톡으로 결과 공유하기</button>
+      <button id="btn-share-result" class="btn kakao">🎉 클리어 결과 공유하기</button>
     </div>
     
-    
-
     <section class="guides-section">
         <h2>📚 스도쿠 마스터 가이드</h2>
         <a href="guides/rules.html" class="guide-btn">💡 스도쿠 기본 규칙 및 초보자 팁</a>
         <a href="guides/advanced.html" class="guide-btn">🔥 스도쿠 고급 기술 (X-Wing 등)</a>
         <a href="guides/benefits.html" class="guide-btn">🧠 스도쿠의 뇌과학적 치매 예방 효과</a>
     </section>
+
+    <footer style="margin-top: 40px; padding: 25px 0; border-top: 1px solid #e2e8f0; text-align: center; font-size: 0.82rem; color: #888; line-height: 1.6;">
+        <p style="margin: 0 0 6px;">누구나 무료로 즐기는 무제한 브라우저 스도쿠 퍼즐 포털입니다.</p>
+        <p style="margin: 0;">
+            <a href="privacy.html" style="color: #666; text-decoration: underline; font-weight: bold;">개인정보처리방침</a> &nbsp;|&nbsp; 
+            <a href="guides/rules.html" style="color: #666; text-decoration: underline;">스도쿠 기본 규칙</a> &nbsp;|&nbsp;
+            <a href="guides/advanced.html" style="color: #666; text-decoration: underline;">고급 풀이법</a>
+        </p>
+    </footer>
     
     <section class="faq-section">
         <h2>❓ 자주 묻는 질문</h2>
@@ -466,38 +472,33 @@
       alert(`축하합니다! 퍼즐을 완성했습니다! 기록: ${m}:${s}`);
     }
 
-    let kakaoLoaded=false;
-    function loadKakaoSDK(){
-      return new Promise((resolve,reject)=>{
-        if(kakaoLoaded || window.Kakao){kakaoLoaded=true; return resolve();}
-        const s=document.createElement('script');
-        s.src='https://developers.kakao.com/sdk/js/kakao.js';
-        s.onload=()=>{kakaoLoaded=true; resolve();};
-        s.onerror=reject;
-        document.head.appendChild(s);
+    function copyText(text, msg) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert(msg || '링크가 복사되었습니다!');
+      }).catch(() => {
+        alert('복사에 실패했습니다. 브라우저 주소창의 링크를 복사해주세요.');
       });
     }
-    
-    async function shareResultKakao(){
+
+    async function shareResultWeb(){
       const m = String(Math.floor(finalClearTime / 60)).padStart(2, '0');
       const s = String(finalClearTime % 60).padStart(2, '0');
       const timeStr = `${m}:${s}`;
-      try{
-        await loadKakaoSDK();
-        if(!window.Kakao) throw new Error('Kakao SDK not available');
-        if(!Kakao.isInitialized()){ Kakao.init(KAKAO_APP_KEY); }
-        const url = location.href;
-        Kakao.Share.sendDefault({
-          objectType: "feed",
-          content: {
+      const url = 'https://sudokuportal.enjoy-onepage.com/';
+      const text = `[스도쿠 퍼즐 클리어!]\n난이도: ${finalDifficulty}\n클리어 타임: ${timeStr}\n지금 바로 도전해보세요!\n${url}`;
+      if (navigator.share) {
+        try {
+          await navigator.share({
             title: `스도쿠 클리어! (${finalDifficulty})`,
-            description: `대단해요! 퍼즐을 ${timeStr} 만에 해결했어요. 기록에 도전해보세요!`,
-            imageUrl: "https://sudokuportal.enjoy-onepage.com/og-image.png",
-            link: { mobileWebUrl: url, webUrl: url }
-          },
-          buttons: [ { title: "스도쿠 풀러 가기", link: { mobileWebUrl: url, webUrl: url } } ]
-        });
-      }catch(e){ alert('공유에 실패했습니다.'); }
+            text: text,
+            url: url
+          });
+        } catch(e) {
+          if (e.name !== 'AbortError') copyText(text, '결과가 복사되었습니다!');
+        }
+      } else {
+        copyText(text, '결과가 복사되었습니다! 친구들에게 자랑해보세요.');
+      }
     }
 
     function newGame(diff){
@@ -536,8 +537,7 @@
       state=deepCopy(puzzle); mistakes=0; finalClearTime = null; finalDifficulty = null;
       document.getElementById('result-share-area').style.display = 'none';
       renderBoard(); renderMemoPad(); highlightErrors(false); document.getElementById('info-state').textContent='진행 중';
-    });
-    document.getElementById('btn-share-result').addEventListener('click', shareResultKakao);
+    document.getElementById('btn-share-result').addEventListener('click', shareResultWeb);
     // Init
     buildBoard(); buildPad(); buildMemoPad();
     const urlParams = new URLSearchParams(window.location.search);
@@ -572,43 +572,44 @@
       newGame('normal');
     }
 
-    async function shareSiteKakao() {
-        await loadKakaoSDK();
-        if(!window.Kakao) return;
-        if(!Kakao.isInitialized()) Kakao.init(KAKAO_APP_KEY);
-        Kakao.Share.sendDefault({
-          objectType: "feed",
-          content: {
-            title: "무설치 원페이지 스도쿠!",
-            description: "뇌 건강과 집중력 향상에 좋은 스도쿠를 언제 어디서나 가볍게 즐겨보세요.",
-            imageUrl: "https://sudokuportal.enjoy-onepage.com/og-image.png",
-            link: { mobileWebUrl: "https://sudokuportal.enjoy-onepage.com/", webUrl: "https://sudokuportal.enjoy-onepage.com/" }
-          },
-          buttons: [{ title: "스도쿠 풀러 가기", link: { mobileWebUrl: "https://sudokuportal.enjoy-onepage.com/", webUrl: "https://sudokuportal.enjoy-onepage.com/" } }]
-        });
+    async function shareSiteWeb() {
+        const url = 'https://sudokuportal.enjoy-onepage.com/';
+        if (navigator.share) {
+            try {
+                await navigator.share({
+                    title: '무설치 원페이지 스도쿠!',
+                    text: '뇌 건강과 집중력 향상에 좋은 스도쿠를 언제 어디서나 가볍게 즐겨보세요.',
+                    url: url
+                });
+            } catch(e) {
+                if (e.name !== 'AbortError') copyText(url, '사이트 링크가 복사되었습니다!');
+            }
+        } else {
+            copyText(url, '사이트 링크가 복사되었습니다!');
+        }
     }
 
-    async function sharePuzzleKakao() {
-        await loadKakaoSDK();
-        if(!window.Kakao) return;
-        if(!Kakao.isInitialized()) Kakao.init(KAKAO_APP_KEY);
+    async function sharePuzzleWeb() {
         const ps = puzzle.flat().join('');
         const ss = solution.flat().join('');
         const shareUrl = "https://sudokuportal.enjoy-onepage.com/?p=" + ps + "&s=" + ss;
-        Kakao.Share.sendDefault({
-          objectType: "feed",
-          content: {
-            title: "🤔 이 스도쿠 문제 좀 풀어줄 사람?",
-            description: "도저히 안 풀려서 헬프 요청합니다! 링크를 눌러서 저 대신 풀어주세요!",
-            imageUrl: "https://sudokuportal.enjoy-onepage.com/og-image.png",
-            link: { mobileWebUrl: shareUrl, webUrl: shareUrl }
-          },
-          buttons: [{ title: "대신 풀어주기", link: { mobileWebUrl: shareUrl, webUrl: shareUrl } }]
-        });
+        if (navigator.share) {
+            try {
+                await navigator.share({
+                    title: '🤔 이 스도쿠 문제 좀 풀어줄 사람?',
+                    text: '도저히 안 풀려서 헬프 요청합니다! 링크를 눌러서 저 대신 풀어주세요!',
+                    url: shareUrl
+                });
+            } catch(e) {
+                if (e.name !== 'AbortError') copyText(shareUrl, '퍼즐 링크가 복사되었습니다!');
+            }
+        } else {
+            copyText(shareUrl, '퍼즐 링크가 복사되었습니다! 친구에게 보내보세요.');
+        }
     }
     
-    document.getElementById('btn-share-puzzle').addEventListener('click', sharePuzzleKakao);
-    document.getElementById('btn-share-site').addEventListener('click', shareSiteKakao);
+    document.getElementById('btn-share-puzzle').addEventListener('click', sharePuzzleWeb);
+    document.getElementById('btn-share-site').addEventListener('click', shareSiteWeb);
 
     // Keyboard support
     document.addEventListener('keydown',e=>{
