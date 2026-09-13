@@ -1,6 +1,23 @@
 <!doctype html>
 <html lang="ko">
 <head>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "스도쿠 무제한 퍼즐 - 즐겨요 원페이지",
+    "description": "매번 새로운 문제가 생성되는 스도쿠 사이트. 난이도 선택, 오류 체크, 메모 기능, 정답 채점까지 모든 기능을 무료로 즐기세요!",
+    "url": "https://sudokuportal.enjoy-onepage.com/",
+    "applicationCategory": "GameApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript. Requires HTML5.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "KRW"
+    }
+  }
+  </script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>스도쿠 무제한 퍼즐 - 즐겨요 원페이지</title>
@@ -716,6 +733,63 @@
              data-full-width-responsive="true"></ins>
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
+
+
+  <!-- Preemptive UX Helper: Auto comma formatting & Result sharing -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Auto comma on number/text inputs with currency hints
+      const moneyInputs = document.querySelectorAll('input[type="text"], input[type="number"], input[inputmode="numeric"]');
+      moneyInputs.forEach(input => {
+        // Skip specific inputs like year, month, date, percent, id
+        const name = (input.name || input.id || '').toLowerCase();
+        if (name.includes('year') || name.includes('month') || name.includes('day') || name.includes('rate') || name.includes('percent') || name.includes('age') || name.includes('score')) {
+          return;
+        }
+        
+        // Listen to input
+        input.addEventListener('input', function(e) {
+          if (this.type === 'number') return; // native number handles own UI
+          let val = this.value.replace(/[^0-9]/g, '');
+          if (val) {
+            this.value = Number(val).toLocaleString('ko-KR');
+          }
+        });
+      });
+
+      // Inject Global Result Copy Function if not exists
+      window.copyResultToClipboard = function(textToCopy, customBtn) {
+        if (!textToCopy) {
+          const resEl = document.querySelector('#result, .result-box, [id*="result"], [class*="result"]');
+          textToCopy = resEl ? resEl.innerText.trim() : window.location.href;
+        }
+        navigator.clipboard.writeText(textToCopy + "
+
+👉 계산기 바로가기: " + window.location.href).then(() => {
+          showToastNotification('계산 결과가 클립보드에 복사되었습니다!');
+        }).catch(() => {
+          showToastNotification('복사되었습니다: ' + window.location.href);
+        });
+      };
+
+      function showToastNotification(msg) {
+        let toast = document.getElementById('global-ux-toast');
+        if (!toast) {
+          toast = document.createElement('div');
+          toast.id = 'global-ux-toast';
+          toast.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#1e293b;color:#fff;padding:12px 24px;border-radius:9999px;font-size:14px;font-weight:600;box-shadow:0 10px 25px rgba(0,0,0,0.2);z-index:9999;transition:all 0.3s ease;opacity:0;pointer-events:none;';
+          document.body.appendChild(toast);
+        }
+        toast.textContent = msg;
+        toast.style.opacity = '1';
+        toast.style.transform = 'translateX(-50%) translateY(0)';
+        setTimeout(() => {
+          toast.style.opacity = '0';
+          toast.style.transform = 'translateX(-50%) translateY(10px)';
+        }, 2200);
+      }
+    });
+  </script>
 
 </body>
 </html>
