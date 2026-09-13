@@ -763,9 +763,7 @@
           const resEl = document.querySelector('#result, .result-box, [id*="result"], [class*="result"]');
           textToCopy = resEl ? resEl.innerText.trim() : window.location.href;
         }
-        navigator.clipboard.writeText(textToCopy + "
-
-👉 계산기 바로가기: " + window.location.href).then(() => {
+        navigator.clipboard.writeText(textToCopy + "\n\n👉 계산기 바로가기: " + window.location.href).then(() => {
           showToastNotification('계산 결과가 클립보드에 복사되었습니다!');
         }).catch(() => {
           showToastNotification('복사되었습니다: ' + window.location.href);
