@@ -2,6 +2,11 @@
 
 <html lang="ko">
 <head>
+    <!-- Performance Optimization: Resource Preconnect -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
 <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/><script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -217,7 +222,18 @@
     .faq-item { background: #fff; padding: 15px; border-radius: 8px; margin-bottom: 10px; border: 1px solid #eee; }
     .faq-item h3 { font-size: 1rem; color: var(--brand); margin: 0 0 8px 0; }
     .faq-item p { font-size: 0.9rem; color: #555; margin: 0; line-height: 1.5; }
-  </style>
+  
+        /* U3 Accessibility: Global Keyboard Focus Ring Standard */
+        :focus-visible {
+            outline: 2px solid #3b82f6 !important;
+            outline-offset: 2px !important;
+        }
+        input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible {
+            outline: 2px solid #2563eb !important;
+            outline-offset: 1px !important;
+        }
+    
+    </style>
 <link href="https://sudokuportal.enjoy-onepage.com/rss.xml" rel="alternate" title="스도쿠 무제한 퍼즐 - 즐겨요 원페이지 RSS Feed" type="application/rss+xml"/>
 <link href="https://sudokuportal.enjoy-onepage.com/sitemap.xml" rel="sitemap" title="Sitemap" type="application/xml"/>
 </meta><script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106"></script><style id="layout-shield">
@@ -255,7 +271,7 @@
 <!-- Left Column: Sudoku Board & Top Controls -->
 <div class="board-col">
 <section class="controls">
-<select id="difficulty">
+<select id="difficulty" aria-label="difficulty">
 <option value="easy">쉬움 (초보자용)</option>
 <option selected="" value="normal">보통 (일반용)</option>
 <option value="hard">어려움 (전문가용)</option>
