@@ -3,21 +3,73 @@
 <html lang="ko">
 <head>
 <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/><script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "스도쿠 무제한 퍼즐 - 즐겨요 원페이지",
-    "description": "매번 새로운 문제가 생성되는 스도쿠 사이트. 난이도 선택, 오류 체크, 메모 기능, 정답 채점까지 모든 기능을 무료로 즐기세요!",
-    "url": "https://sudokuportal.enjoy-onepage.com/",
-    "applicationCategory": "GameApplication",
-    "operatingSystem": "All",
-    "browserRequirements": "Requires JavaScript. Requires HTML5.",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "KRW"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://sudokuportal.enjoy-onepage.com/#webapp",
+      "name": "SUDOKU 스도쿠",
+      "url": "https://sudokuportal.enjoy-onepage.com/",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
+      "description": "매번 새로운 문제가 생성되는 스도쿠 사이트. 난이도 선택, 오류 체크, 메모 기능, 정답 채점까지 모든 기능을 무료로 즐기세요!",
+      "image": "https://sudokuportal.enjoy-onepage.com/og-image.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://sudokuportal.enjoy-onepage.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "막혔을 때 찍어서 맞춰도 되나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "무작위 추측은 연쇄 논리 오류를 유발합니다. 반드시 모든 빈칸에 연필 메모(후보 숫자)를 적어두고 후보군을 소거하는 방식으로 풀어야 합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "난이도(초급/중급/고급)의 차이는 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "처음에 주어지는 고정 힌트 숫자의 개수와, X-Wing이나 교차 배제 같은 고급 추론 알고리즘이 필요한지 여부에 따라 결정됩니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "하루에 몇 판 정도 푸는 것이 두뇌 건강에 좋나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "매일 15~30분 동안 1~2문제를 몰입해서 푸는 습관이 뇌 신경망 가소성(Neuroplasticity) 자극에 가장 이상적입니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "스도쿠 정답은 항상 유일한가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네! 저희 사이트에서 생성되는 모든 스도쿠 문제는 논리적으로 풀 수 있는 유일한 해답을 보장하도록 설계되었습니다. 찍지 않고 논리만으로 풀 수 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "후보 숫자 메모는 어떻게 하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "빈 칸을 선택하면 아래에 나타나는 '후보 숫자 메모' 패드에서 여러 숫자를 선택할 수 있습니다. 헷갈리는 칸에는 들어갈 수 있는 숫자를 미리 메모해 두면 문제를 풀기 훨씬 수월해집니다."
+          }
+        }
+      ]
     }
-  }
+  ]
+}
   </script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
