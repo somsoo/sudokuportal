@@ -255,6 +255,15 @@
   }
 </style>
 <meta content="summary_large_image" name="twitter:card"/><meta content="스도쿠 무제한 퍼즐 - 즐겨요 원페이지" name="twitter:title"/><meta content="매번 새로운 문제가 생성되는 스도쿠 사이트. 난이도 선택, 오류 체크, 메모 기능, 정답 채점까지 모든 기능을 무료로 즐기세요!" name="twitter:description"/><meta content="https://sudokuportal.enjoy-onepage.com/og-image.png" name="twitter:image"/><style id="mobile-hardening-shield">
+  /* 모바일 한글 단어 단위 줄바꿈 보존 & 버튼 텍스트 단일행 쉴드 */
+  body, h1, h2, h3, h4, p, span, label {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+  button, [role="button"], a.btn {
+    white-space: nowrap;
+    word-break: keep-all;
+  }
   @media (max-width: 640px) {
     input, select, textarea {
       font-size: 16px !important;
