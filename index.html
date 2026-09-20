@@ -286,16 +286,16 @@
 <ins class="adsbygoogle" data-ad-client="ca-pub-2228289204702106" data-ad-format="horizontal" data-ad-slot="3824727725" data-full-width-responsive="true" style="display:inline-block;width:100%;height:60px;"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-<div class="game-layout">
+<div class="game-layout grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 <!-- Left Column: Sudoku Board & Top Controls -->
-<div class="board-col">
+<div class="board-col lg:col-span-6 w-full">
 <section class="controls">
 <select id="difficulty" aria-label="difficulty">
 <option value="easy">쉬움 (초보자용)</option>
 <option selected="" value="normal">보통 (일반용)</option>
 <option value="hard">어려움 (전문가용)</option>
 </select>
-<button class="btn primary whitespace-nowrap" id="btn-new" style="margin-left:5px;">새 퍼즐</button>
+<button class="btn primary whitespace-nowrap py-3 min-h-[44px]" id="btn-new" style="margin-left:5px;">새 퍼즐</button>
 </section>
 <div class="board" id="board"></div>
 <div class="info" style="margin-top:15px;">
@@ -306,7 +306,7 @@
 </div>
 </div>
 <!-- Right Column: Number Keypad, Memos, Actions & Sharing -->
-<div class="control-col">
+<div class="control-col lg:col-span-6 lg:sticky lg:top-8 w-full">
 <div class="memo-pad-area" id="memo-pad-area" style="display:none;">
 <div class="pad-label">✏️ 후보 숫자 메모 (복수 선택 가능)</div>
 <div class="memo-pad" id="memo-pad"></div>
@@ -314,27 +314,27 @@
 <div class="pad-label" style="margin-top:5px;">🔢 정답 입력 키패드</div>
 <div class="pad" id="pad"></div>
 <div style="display:flex; gap:8px; margin-bottom:12px; margin-top:5px;">
-<button class="btn kakao whitespace-nowrap" id="btn-share-puzzle" style="flex:1; margin:0;">🆘 친구에게 헬프 요청</button>
-<button class="btn whitespace-nowrap" id="btn-share-site" style="flex:1; background:#333; color:#fff; margin:0; border:none;">💌 사이트 공유</button>
+<button class="btn kakao whitespace-nowrap py-3 min-h-[44px]" id="btn-share-puzzle" style="flex:1; margin:0;">🆘 친구에게 헬프 요청</button>
+<button class="btn whitespace-nowrap py-3 min-h-[44px]" id="btn-share-site" style="flex:1; background:#333; color:#fff; margin:0; border:none;">💌 사이트 공유</button>
 </div>
 <section class="actions">
-<button class="btn whitespace-nowrap" id="btn-check">오류 체크</button>
-<button class="btn whitespace-nowrap" id="btn-solve">해답 보기</button>
-<button class="btn whitespace-nowrap" id="btn-reset">초기화</button>
-<button class="btn whitespace-nowrap" id="btn-mark">셀 하이라이트</button>
+<button class="btn whitespace-nowrap py-3 min-h-[44px]" id="btn-check">오류 체크</button>
+<button class="btn whitespace-nowrap py-3 min-h-[44px]" id="btn-solve">해답 보기</button>
+<button class="btn whitespace-nowrap py-3 min-h-[44px]" id="btn-reset">초기화</button>
+<button class="btn whitespace-nowrap py-3 min-h-[44px]" id="btn-mark">셀 하이라이트</button>
 </section>
 </div>
 </div>
 <div id="result-share-area" style="display:none; text-align:center; margin-top:20px;">
 <h3 style="color:var(--brand); margin-bottom:5px;">🎉 퍼즐 클리어!</h3>
 <p id="result-msg" style="margin-top:0; color:#555;">정말 대단해요!</p>
-<button class="btn kakao whitespace-nowrap" id="btn-share-result">🎉 클리어 결과 공유하기</button>
+<button class="btn kakao whitespace-nowrap py-3 min-h-[44px]" id="btn-share-result">🎉 클리어 결과 공유하기</button>
 </div>
 <section class="guides-section">
 <h2>📚 스도쿠 마스터 가이드</h2>
-<a class="guide-btn" href="guides/rules.html">💡 스도쿠 푸는법: 3대 기본 규칙 및 초보자 팁</a>
-<a class="guide-btn" href="guides/advanced.html">🔥 스도쿠 고급 공식: X-Wing 및 네이키드 페어</a>
-<a class="guide-btn" href="guides/benefits.html">🧠 치매예방 스도쿠 효능: 두뇌 활성화 훈련법</a>
+<a class="guide-btn py-3 min-h-[44px]" href="guides/rules.html">💡 스도쿠 푸는법: 3대 기본 규칙 및 초보자 팁</a>
+<a class="guide-btn py-3 min-h-[44px]" href="guides/advanced.html">🔥 스도쿠 고급 공식: X-Wing 및 네이키드 페어</a>
+<a class="guide-btn py-3 min-h-[44px]" href="guides/benefits.html">🧠 치매예방 스도쿠 효능: 두뇌 활성화 훈련법</a>
 </section>
 <!-- 📌 상세 가이드 & FAQ 아코디언 (Google E-E-A-T 및 실사용자 가이드라인 100% 충족) -->
 <section class="max-w-4xl mx-auto my-12 px-4">
