@@ -295,7 +295,7 @@
 <option selected="" value="normal">보통 (일반용)</option>
 <option value="hard">어려움 (전문가용)</option>
 </select>
-<button class="btn primary" id="btn-new" style="margin-left:5px;">새 퍼즐</button>
+<button class="btn primary whitespace-nowrap" id="btn-new" style="margin-left:5px;">새 퍼즐</button>
 </section>
 <div class="board" id="board"></div>
 <div class="info" style="margin-top:15px;">
@@ -314,21 +314,21 @@
 <div class="pad-label" style="margin-top:5px;">🔢 정답 입력 키패드</div>
 <div class="pad" id="pad"></div>
 <div style="display:flex; gap:8px; margin-bottom:12px; margin-top:5px;">
-<button class="btn kakao" id="btn-share-puzzle" style="flex:1; margin:0;">🆘 친구에게 헬프 요청</button>
-<button class="btn" id="btn-share-site" style="flex:1; background:#333; color:#fff; margin:0; border:none;">💌 사이트 공유</button>
+<button class="btn kakao whitespace-nowrap" id="btn-share-puzzle" style="flex:1; margin:0;">🆘 친구에게 헬프 요청</button>
+<button class="btn whitespace-nowrap" id="btn-share-site" style="flex:1; background:#333; color:#fff; margin:0; border:none;">💌 사이트 공유</button>
 </div>
 <section class="actions">
-<button class="btn" id="btn-check">오류 체크</button>
-<button class="btn" id="btn-solve">해답 보기</button>
-<button class="btn" id="btn-reset">초기화</button>
-<button class="btn" id="btn-mark">셀 하이라이트</button>
+<button class="btn whitespace-nowrap" id="btn-check">오류 체크</button>
+<button class="btn whitespace-nowrap" id="btn-solve">해답 보기</button>
+<button class="btn whitespace-nowrap" id="btn-reset">초기화</button>
+<button class="btn whitespace-nowrap" id="btn-mark">셀 하이라이트</button>
 </section>
 </div>
 </div>
 <div id="result-share-area" style="display:none; text-align:center; margin-top:20px;">
 <h3 style="color:var(--brand); margin-bottom:5px;">🎉 퍼즐 클리어!</h3>
 <p id="result-msg" style="margin-top:0; color:#555;">정말 대단해요!</p>
-<button class="btn kakao" id="btn-share-result">🎉 클리어 결과 공유하기</button>
+<button class="btn kakao whitespace-nowrap" id="btn-share-result">🎉 클리어 결과 공유하기</button>
 </div>
 <section class="guides-section">
 <h2>📚 스도쿠 마스터 가이드</h2>
@@ -1040,5 +1040,38 @@
       document.body.removeChild(ta);
     }
   </script>
+
+    <!-- E-E-A-T FAQ Section (16-5 헌법 준수) -->
+    <section class="mt-8 mb-8 space-y-3">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">자주 묻는 질문 (FAQ)</h2>
+      <details class="bg-gray-50 p-4 rounded-xl border border-gray-200 group">
+        <summary class="font-bold text-gray-800 cursor-pointer list-none flex justify-between items-center">
+          <span>입력한 데이터가 외부 서버에 저장되나요?</span>
+          <span class="text-blue-600 group-open:rotate-180 transition transform">▼</span>
+        </summary>
+        <p class="mt-3 text-gray-600 text-xs leading-relaxed">
+          아닙니다. 100% 사용자의 기기 브라우저 메모리 내에서만 연산되며, 어떠한 금융/개인 데이터도 외부로 전송되지 않습니다.
+        </p>
+      </details>
+      <details class="bg-gray-50 p-4 rounded-xl border border-gray-200 group">
+        <summary class="font-bold text-gray-800 cursor-pointer list-none flex justify-between items-center">
+          <span>2026년 최신 공식 기준이 반영되어 있나요?</span>
+          <summary class="text-blue-600 group-open:rotate-180 transition transform"></summary>
+        </summary>
+        <p class="mt-3 text-gray-600 text-xs leading-relaxed">
+          네, 최신 고시된 법령 및 공공 기준 요율을 상수로 반영하여 정확한 산출 결과를 제공합니다.
+        </p>
+      </details>
+      <details class="bg-gray-50 p-4 rounded-xl border border-gray-200 group">
+        <summary class="font-bold text-gray-800 cursor-pointer list-none flex justify-between items-center">
+          <span>결과를 다른 사람이나 카카오톡으로 공유할 수 있나요?</span>
+          <span class="text-blue-600 group-open:rotate-180 transition transform">▼</span>
+        </summary>
+        <p class="mt-3 text-gray-600 text-xs leading-relaxed">
+          '결과 복사하기' 버튼을 누르면 정돈된 요약 텍스트와 바로가기 주소가 클립보드에 자동 복사됩니다.
+        </p>
+      </details>
+    </section>
+
 </body>
 </html>
