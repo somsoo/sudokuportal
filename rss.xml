@@ -6,48 +6,48 @@
   <description>매일 새 문제가 나오는 오늘의 스도쿠와 쉬움~전문가 4단계 무제한 퍼즐. 메모·오류 체크·기록 저장 무료.</description>
   <language>ko-kr</language>
   <atom:link href="https://sudokuportal.enjoy-onepage.com/rss.xml" rel="self" type="application/rss+xml" />
-  <lastBuildDate>Tue, 29 Sep 2026 16:02:20 +0000</lastBuildDate>
+  <lastBuildDate>Tue, 29 Sep 2026 16:57:53 +0000</lastBuildDate>
   <item>
-    <title>스도쿠 가이드 모음 | 규칙부터 고급 기법까지</title>
-    <link>https://sudokuportal.enjoy-onepage.com/guides/</link>
-    <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/guides/</guid>
-    <description>스도쿠 규칙, 초보자 소거법, 네이키드 페어와 X-Wing 같은 고급 기법 가이드를 한곳에 모았습니다.</description>
-    <pubDate>Wed, 30 Sep 2026 01:02:20 +0900</pubDate>
-  </item>
-  <item>
-    <title>전문가 스도쿠 | 최고 난도 무료 퍼즐</title>
-    <link>https://sudokuportal.enjoy-onepage.com/level/expert.html</link>
-    <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/level/expert.html</guid>
-    <description>빈칸 56개 이상, 주어진 숫자 25개 이하의 전문가 스도쿠. X-Wing 같은 고급 기법까지 쓰는 최고 난도 퍼즐입니다.</description>
-    <pubDate>Wed, 30 Sep 2026 01:02:20 +0900</pubDate>
-  </item>
-  <item>
-    <title>어려운 스도쿠 | 고급 무료 퍼즐 무제한</title>
-    <link>https://sudokuportal.enjoy-onepage.com/level/hard.html</link>
-    <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/level/hard.html</guid>
-    <description>빈칸 51~55개의 어려운 스도쿠. 네이키드 페어와 포인팅 같은 후보 소거 기법이 필요할 수 있는 무료 퍼즐입니다.</description>
-    <pubDate>Wed, 30 Sep 2026 01:02:20 +0900</pubDate>
-  </item>
-  <item>
-    <title>보통 스도쿠 | 중급 무료 퍼즐 무제한</title>
-    <link>https://sudokuportal.enjoy-onepage.com/level/normal.html</link>
-    <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/level/normal.html</guid>
-    <description>빈칸 45~50개의 보통 난이도 스도쿠. 히든 싱글과 후보 메모를 연습하기 좋은 무제한 무료 퍼즐입니다.</description>
-    <pubDate>Wed, 30 Sep 2026 01:02:20 +0900</pubDate>
+    <title>오늘의 스도쿠 | 매일 새 문제·연속 기록 무료</title>
+    <link>https://sudokuportal.enjoy-onepage.com/daily.html</link>
+    <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/daily.html</guid>
+    <description>한국 시간 기준으로 매일 모두에게 같은 문제가 나오는 오늘의 스도쿠. 연속 기록을 쌓고 친구와 같은 문제로 겨뤄 보세요.</description>
+    <pubDate>Wed, 30 Sep 2026 01:05:11 +0900</pubDate>
   </item>
   <item>
     <title>쉬운 스도쿠 | 초보자용 무료 퍼즐 무제한</title>
     <link>https://sudokuportal.enjoy-onepage.com/level/easy.html</link>
     <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/level/easy.html</guid>
     <description>빈칸 36~40개, 싱글 기법만으로 풀리는 쉬운 스도쿠. 규칙만 알면 처음 하는 분도 끝까지 풀 수 있어요.</description>
-    <pubDate>Wed, 30 Sep 2026 01:02:20 +0900</pubDate>
+    <pubDate>Wed, 30 Sep 2026 01:05:11 +0900</pubDate>
   </item>
   <item>
-    <title>오늘의 스도쿠 | 매일 새 문제·연속 기록 무료</title>
-    <link>https://sudokuportal.enjoy-onepage.com/daily.html</link>
-    <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/daily.html</guid>
-    <description>한국 시간 기준으로 매일 모두에게 같은 문제가 나오는 오늘의 스도쿠. 연속 기록을 쌓고 친구와 같은 문제로 겨뤄 보세요.</description>
-    <pubDate>Wed, 30 Sep 2026 01:02:20 +0900</pubDate>
+    <title>보통 스도쿠 | 중급 무료 퍼즐 무제한</title>
+    <link>https://sudokuportal.enjoy-onepage.com/level/normal.html</link>
+    <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/level/normal.html</guid>
+    <description>빈칸 45~50개의 보통 난이도 스도쿠. 히든 싱글과 후보 메모를 연습하기 좋은 무제한 무료 퍼즐입니다.</description>
+    <pubDate>Wed, 30 Sep 2026 01:05:11 +0900</pubDate>
+  </item>
+  <item>
+    <title>어려운 스도쿠 | 고급 무료 퍼즐 무제한</title>
+    <link>https://sudokuportal.enjoy-onepage.com/level/hard.html</link>
+    <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/level/hard.html</guid>
+    <description>빈칸 51~55개의 어려운 스도쿠. 네이키드 페어와 포인팅 같은 후보 소거 기법이 필요할 수 있는 무료 퍼즐입니다.</description>
+    <pubDate>Wed, 30 Sep 2026 01:05:11 +0900</pubDate>
+  </item>
+  <item>
+    <title>전문가 스도쿠 | 최고 난도 무료 퍼즐</title>
+    <link>https://sudokuportal.enjoy-onepage.com/level/expert.html</link>
+    <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/level/expert.html</guid>
+    <description>빈칸 56개 이상, 주어진 숫자 25개 이하의 전문가 스도쿠. X-Wing 같은 고급 기법까지 쓰는 최고 난도 퍼즐입니다.</description>
+    <pubDate>Wed, 30 Sep 2026 01:05:11 +0900</pubDate>
+  </item>
+  <item>
+    <title>스도쿠 가이드 모음 | 규칙부터 고급 기법까지</title>
+    <link>https://sudokuportal.enjoy-onepage.com/guides/</link>
+    <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/guides/</guid>
+    <description>스도쿠 규칙, 초보자 소거법, 네이키드 페어와 X-Wing 같은 고급 기법 가이드를 한곳에 모았습니다.</description>
+    <pubDate>Wed, 30 Sep 2026 01:05:11 +0900</pubDate>
   </item>
   <item>
     <title>이용약관 - 스도쿠 무제한 퍼즐</title>

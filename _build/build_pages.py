@@ -18,6 +18,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://sudokuportal.enjoy-onepage.com"
+EN_SITE = "https://us-daily-sudoku-puzzle.enjoy-onepage.com"  # English twin with the same paths (reciprocal hreflang)
 KST = dt.timezone(dt.timedelta(hours=9))
 
 PAGES = [
@@ -160,6 +161,9 @@ def head_block(p):
         f'<meta name="description" content="{d}">',
         '<meta name="robots" content="index, follow">',
         f'<link rel="canonical" href="{url}">',
+        f'<link rel="alternate" hreflang="ko" href="{url}">',
+        f'<link rel="alternate" hreflang="en" href="{EN_SITE}/{p["path"]}">',
+        f'<link rel="alternate" hreflang="x-default" href="{EN_SITE}/{p["path"]}">',
         '<meta name="theme-color" content="#f97316">',
         '<link rel="icon" href="/favicon.ico">',
         '<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">',
