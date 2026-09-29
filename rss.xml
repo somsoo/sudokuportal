@@ -1,67 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>스도쿠 무제한 퍼즐 - 즐겨요 원페이지</title>
-    <link>https://sudokuportal.enjoy-onepage.com/</link>
-    <description>스도쿠 무제한 퍼즐 - 즐겨요 원페이지 실시간 온라인 도구 및 팩트 기반 전문 칼럼 피드</description>
-    <language>ko-KR</language>
-    <lastBuildDate>Sat, 12 Sep 2026 03:00:00 +0900</lastBuildDate>
-    <atom:link href="https://sudokuportal.enjoy-onepage.com/rss.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>스도쿠 무제한 퍼즐 - 즐겨요 원페이지</title>
-      <link>https://sudokuportal.enjoy-onepage.com/</link>
-      <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/</guid>
-      <description>스도쿠 무제한 퍼즐 - 즐겨요 원페이지 실시간 온라인 무료 도구 및 시뮬레이터</description>
-      <pubDate>Sat, 12 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>스도쿠 무제한 퍼즐 - 즐겨요 원페이지 서비스 소개 및 산출 공식 안내</title>
-      <link>https://sudokuportal.enjoy-onepage.com/about.html</link>
-      <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/about.html</guid>
-      <description>스도쿠 무제한 퍼즐 - 즐겨요 원페이지의 데이터 처리 원칙, 공식 산출 로직 및 검증 기준입니다.</description>
-      <pubDate>Sat, 12 Sep 2026 01:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>스도쿠 무제한 퍼즐 - 즐겨요 원페이지 개인정보처리방침</title>
-      <link>https://sudokuportal.enjoy-onepage.com/privacy.html</link>
-      <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/privacy.html</guid>
-      <description>스도쿠 무제한 퍼즐 - 즐겨요 원페이지의 개인정보 보호 및 100% 브라우저 메모리 로컬 연산 보안 정책입니다.</description>
-      <pubDate>Sat, 12 Sep 2026 01:10:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>스도쿠 고급 공식 X-Wing 네이키드 페어 기법</title>
-      <link>https://sudokuportal.enjoy-onepage.com/guides/advanced.html</link>
-      <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/guides/advanced.html</guid>
-      <description>중급자에서 고급자로! 네이키드 페어, 히든 페어, X-Wing 등 실전 스도쿠 고급 공식 총정리.</description>
-      <pubDate>Sat, 12 Sep 2026 02:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>치매예방 스도쿠 효능 두뇌 활성화 훈련법</title>
-      <link>https://sudokuportal.enjoy-onepage.com/guides/benefits.html</link>
-      <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/guides/benefits.html</guid>
-      <description>기억력 향상과 집중력 강화! 매일 15분 스도쿠가 치매 예방과 뇌 건강에 미치는 놀라운 효능.</description>
-      <pubDate>Sat, 12 Sep 2026 02:15:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>스도쿠(Sudoku) 3대 기본 규칙과 초보자를 위한 소거법 입문 공식 | 스도쿠 무제한 퍼즐 - 즐겨요 원페이지</title>
-      <link>https://sudokuportal.enjoy-onepage.com/guides/guide1.html</link>
-      <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/guides/guide1.html</guid>
-      <description>가로 9행, 세로 9열, 3×3 미니박스 9개에 1부터 9까지 중복 없이 숫자를 채우는 스도쿠의 논리적 메커니즘입니다.</description>
-      <pubDate>Sat, 12 Sep 2026 02:30:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>스도쿠 고급 공식: 네이키드 페어(Naked Pair)부터 X-Wing 기법까지 | 스도쿠 무제한 퍼즐 - 즐겨요 원페이지</title>
-      <link>https://sudokuportal.enjoy-onepage.com/guides/guide2.html</link>
-      <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/guides/guide2.html</guid>
-      <description>중·고급 단계에서 막혔을 때 사용하는 후보 숫자 연계 전략과 직사각형 논리 소거 기법입니다.</description>
-      <pubDate>Sat, 12 Sep 2026 02:45:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>스도쿠 푸는법 초보자를 위한 3대 기본 규칙</title>
-      <link>https://sudokuportal.enjoy-onepage.com/guides/rules.html</link>
-      <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/guides/rules.html</guid>
-      <description>가로줄, 세로줄, 3x3 박스 숫자 1~9 채우기! 스도쿠 초보자를 위한 가장 빠른 입문 가이드.</description>
-      <pubDate>Sat, 12 Sep 2026 03:00:00 +0900</pubDate>
-    </item>
-  </channel>
+<channel>
+  <title>스도쿠 무제한 퍼즐 | 오늘의 스도쿠·난이도별 무료</title>
+  <link>https://sudokuportal.enjoy-onepage.com/</link>
+  <description>매일 새 문제가 나오는 오늘의 스도쿠와 쉬움~전문가 4단계 무제한 퍼즐. 메모·오류 체크·기록 저장 무료.</description>
+  <language>ko-kr</language>
+  <atom:link href="https://sudokuportal.enjoy-onepage.com/rss.xml" rel="self" type="application/rss+xml" />
+  <lastBuildDate>Tue, 29 Sep 2026 16:02:20 +0000</lastBuildDate>
+  <item>
+    <title>스도쿠 가이드 모음 | 규칙부터 고급 기법까지</title>
+    <link>https://sudokuportal.enjoy-onepage.com/guides/</link>
+    <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/guides/</guid>
+    <description>스도쿠 규칙, 초보자 소거법, 네이키드 페어와 X-Wing 같은 고급 기법 가이드를 한곳에 모았습니다.</description>
+    <pubDate>Wed, 30 Sep 2026 01:02:20 +0900</pubDate>
+  </item>
+  <item>
+    <title>전문가 스도쿠 | 최고 난도 무료 퍼즐</title>
+    <link>https://sudokuportal.enjoy-onepage.com/level/expert.html</link>
+    <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/level/expert.html</guid>
+    <description>빈칸 56개 이상, 주어진 숫자 25개 이하의 전문가 스도쿠. X-Wing 같은 고급 기법까지 쓰는 최고 난도 퍼즐입니다.</description>
+    <pubDate>Wed, 30 Sep 2026 01:02:20 +0900</pubDate>
+  </item>
+  <item>
+    <title>어려운 스도쿠 | 고급 무료 퍼즐 무제한</title>
+    <link>https://sudokuportal.enjoy-onepage.com/level/hard.html</link>
+    <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/level/hard.html</guid>
+    <description>빈칸 51~55개의 어려운 스도쿠. 네이키드 페어와 포인팅 같은 후보 소거 기법이 필요할 수 있는 무료 퍼즐입니다.</description>
+    <pubDate>Wed, 30 Sep 2026 01:02:20 +0900</pubDate>
+  </item>
+  <item>
+    <title>보통 스도쿠 | 중급 무료 퍼즐 무제한</title>
+    <link>https://sudokuportal.enjoy-onepage.com/level/normal.html</link>
+    <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/level/normal.html</guid>
+    <description>빈칸 45~50개의 보통 난이도 스도쿠. 히든 싱글과 후보 메모를 연습하기 좋은 무제한 무료 퍼즐입니다.</description>
+    <pubDate>Wed, 30 Sep 2026 01:02:20 +0900</pubDate>
+  </item>
+  <item>
+    <title>쉬운 스도쿠 | 초보자용 무료 퍼즐 무제한</title>
+    <link>https://sudokuportal.enjoy-onepage.com/level/easy.html</link>
+    <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/level/easy.html</guid>
+    <description>빈칸 36~40개, 싱글 기법만으로 풀리는 쉬운 스도쿠. 규칙만 알면 처음 하는 분도 끝까지 풀 수 있어요.</description>
+    <pubDate>Wed, 30 Sep 2026 01:02:20 +0900</pubDate>
+  </item>
+  <item>
+    <title>오늘의 스도쿠 | 매일 새 문제·연속 기록 무료</title>
+    <link>https://sudokuportal.enjoy-onepage.com/daily.html</link>
+    <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/daily.html</guid>
+    <description>한국 시간 기준으로 매일 모두에게 같은 문제가 나오는 오늘의 스도쿠. 연속 기록을 쌓고 친구와 같은 문제로 겨뤄 보세요.</description>
+    <pubDate>Wed, 30 Sep 2026 01:02:20 +0900</pubDate>
+  </item>
+  <item>
+    <title>이용약관 - 스도쿠 무제한 퍼즐</title>
+    <link>https://sudokuportal.enjoy-onepage.com/terms.html</link>
+    <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/terms.html</guid>
+    <description>이용약관 - 스도쿠 무제한 퍼즐</description>
+    <pubDate>Mon, 14 Sep 2026 08:37:14 +0900</pubDate>
+  </item>
+  <item>
+    <title>서비스 소개 및 산출 공식 | 스도쿠 포털</title>
+    <link>https://sudokuportal.enjoy-onepage.com/about.html</link>
+    <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/about.html</guid>
+    <description>서비스 소개 및 산출 공식 | 스도쿠 포털</description>
+    <pubDate>Sat, 12 Sep 2026 01:52:18 +0900</pubDate>
+  </item>
+  <item>
+    <title>스도쿠(Sudoku) 3대 기본 규칙과 초보자를 위한 소거법 입문 공식 | 스도쿠 무제한 퍼즐 - 즐겨요 원페이지</title>
+    <link>https://sudokuportal.enjoy-onepage.com/guides/guide1.html</link>
+    <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/guides/guide1.html</guid>
+    <description>가로 9행, 세로 9열, 3×3 미니박스 9개에 1부터 9까지 중복 없이 숫자를 채우는 스도쿠의 논리적 메커니즘입니다.</description>
+    <pubDate>Sat, 12 Sep 2026 01:49:02 +0900</pubDate>
+  </item>
+  <item>
+    <title>스도쿠 고급 공식: 네이키드 페어(Naked Pair)부터 X-Wing 기법까지 | 스도쿠 무제한 퍼즐 - 즐겨요 원페이지</title>
+    <link>https://sudokuportal.enjoy-onepage.com/guides/guide2.html</link>
+    <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/guides/guide2.html</guid>
+    <description>중·고급 단계에서 막혔을 때 사용하는 후보 숫자 연계 전략과 직사각형 논리 소거 기법입니다.</description>
+    <pubDate>Sat, 12 Sep 2026 01:49:02 +0900</pubDate>
+  </item>
+  <item>
+    <title>개인정보처리방침 | 스도쿠 포털</title>
+    <link>https://sudokuportal.enjoy-onepage.com/privacy.html</link>
+    <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/privacy.html</guid>
+    <description>스도쿠 포털 서비스의 개인정보처리방침입니다. 사용자의 모든 게임 기록은 서버에 저장되지 않습니다.</description>
+    <pubDate>Fri, 11 Sep 2026 11:22:47 +0900</pubDate>
+  </item>
+  <item>
+    <title>스도쿠 고급 공식 X-Wing 네이키드 페어 기법</title>
+    <link>https://sudokuportal.enjoy-onepage.com/guides/advanced.html</link>
+    <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/guides/advanced.html</guid>
+    <description>중급자에서 고급자로! 네이키드 페어, 히든 페어, X-Wing 등 실전 스도쿠 고급 공식 총정리.</description>
+    <pubDate>Sat, 22 Aug 2026 22:47:13 +0900</pubDate>
+  </item>
+  <item>
+    <title>스도쿠 푸는법 초보자를 위한 3대 기본 규칙</title>
+    <link>https://sudokuportal.enjoy-onepage.com/guides/rules.html</link>
+    <guid isPermaLink="true">https://sudokuportal.enjoy-onepage.com/guides/rules.html</guid>
+    <description>가로줄, 세로줄, 3x3 박스 숫자 1~9 채우기! 스도쿠 초보자를 위한 가장 빠른 입문 가이드.</description>
+    <pubDate>Sat, 22 Aug 2026 22:47:13 +0900</pubDate>
+  </item>
+</channel>
 </rss>

@@ -2,30 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sudokuportal.enjoy-onepage.com/</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://sudokuportal.enjoy-onepage.com/about.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <loc>https://sudokuportal.enjoy-onepage.com/daily.html</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://sudokuportal.enjoy-onepage.com/privacy.html</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://sudokuportal.enjoy-onepage.com/guides/advanced.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <loc>https://sudokuportal.enjoy-onepage.com/level/easy.html</loc>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sudokuportal.enjoy-onepage.com/guides/benefits.html</loc>
+    <loc>https://sudokuportal.enjoy-onepage.com/level/normal.html</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sudokuportal.enjoy-onepage.com/level/hard.html</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sudokuportal.enjoy-onepage.com/level/expert.html</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sudokuportal.enjoy-onepage.com/guides/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sudokuportal.enjoy-onepage.com/guides/advanced.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -47,5 +65,23 @@
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sudokuportal.enjoy-onepage.com/about.html</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://sudokuportal.enjoy-onepage.com/privacy.html</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://sudokuportal.enjoy-onepage.com/terms.html</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>
