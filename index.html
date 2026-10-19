@@ -782,9 +782,18 @@
   function renderStats() {
     var s = loadStats(), grid = $('stats-grid');
     if (grid) {
-      grid.innerHTML = LEVEL_KEYS.map(function (k) {
-        return '<div>' + LEVELS[k].label + '<b>' + fmt(s.best[k]) + '</b><small>' + (s.solved[k] || 0) + '판 클리어</small></div>';
-      }).join('');
+      grid.textContent = '';
+      LEVEL_KEYS.forEach(function (k) {
+        var d = document.createElement('div');
+        d.textContent = LEVELS[k].label;
+        var b = document.createElement('b');
+        b.textContent = fmt(s.best[k]);
+        d.appendChild(b);
+        var sm = document.createElement('small');
+        sm.textContent = (s.solved[k] || 0) + '판 클리어';
+        d.appendChild(sm);
+        grid.appendChild(d);
+      });
     }
     var sk = $('stats-streak');
     if (sk) { var n = liveStreak(s); sk.textContent = n ? '🔥 오늘의 스도쿠 ' + n + '일 연속 (최장 ' + (s.streak.max || n) + '일)' : '🔥 오늘의 스도쿠를 풀면 연속 기록이 시작돼요.'; }
